@@ -40,12 +40,9 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run unit tests 
       run: mvn -e test
+    - name : Deploy 
+      run : |
+        echo "Deploying to production..."
+        cp target/my-app.jar /opt/my-app/
 
-    - name: Trigger Jenkins Deployment
-      uses: actions/github-script@v3
-      with:
-        script: |
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -d '{"project": "http://localhost:8008/job/deploy/", "pipeline": "deploy", "branch": "dev"}' \
-            http://localhost:8008/job/deploy/buildWithParameters
+    

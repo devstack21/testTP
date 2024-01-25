@@ -48,8 +48,8 @@ jobs:
           curl -X POST \
             -H "Content-Type: application/json" \
             -d '{
-              "project": "http://localhost:8080/job/deploy",
+              "project": "http://localhost:8008/job/deploy",
               "pipeline": "deploy",
               "branch" : "dev"
             }' \
-            http://localhost:8080/job/deploy/buildWithParameters
+            http://localhost:8008/job/deploy/buildWithParameters

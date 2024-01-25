@@ -1,17 +1,383 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="92" passed="92" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-17T22:33:02 WAT" name="Surefire suite" finished-at="2024-01-17T22:33:03 WAT" duration-ms="769">
+  <suite started-at="2024-01-25T19:21:12 WAT" name="Surefire suite" finished-at="2024-01-25T19:21:14 WAT" duration-ms="1141">
     <groups>
     </groups>
-    <test started-at="2024-01-17T22:33:02 WAT" name="Surefire test" finished-at="2024-01-17T22:33:03 WAT" duration-ms="769">
+    <test started-at="2024-01-25T19:21:12 WAT" name="Surefire test" finished-at="2024-01-25T19:21:14 WAT" duration-ms="1141">
       <class name="dev.djob.id.AppTest">
-        <test-method signature="shouldAnswerWithTrue()" started-at="2024-01-17T22:33:02 WAT" name="shouldAnswerWithTrue" finished-at="2024-01-17T22:33:02 WAT" duration-ms="7" status="PASS">
+        <test-method signature="shouldAnswerWithTrue()" started-at="2024-01-25T19:21:12 WAT" name="shouldAnswerWithTrue" finished-at="2024-01-25T19:21:13 WAT" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldAnswerWithTrue -->
       </class> <!-- dev.djob.id.AppTest -->
+      <class name="dev.djob.id.QuadraticEquationSolverTest">
+        <test-method signature="testSolveA_TresGrandNegatif_B_ProcheDeZeroNegatif_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_ProcheDeZeroNegatif_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_ProcheDeZeroNegatif_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_PositifNormal_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresGrandNegatif_B_TresProcheDeZeroPositif_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_TresProcheDeZeroPositif_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_TresProcheDeZeroPositif_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_TresGrandPositif_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_TresGrandPositif_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_TresGrandPositif_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_TresGrandNegatif_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_TresGrandNegatif_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="98" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_TresGrandNegatif_C_PositifNormal_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_Zero_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_Zero_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_Zero_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_TresGrandNegatif_B_Zero_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_Zero_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_Zero_C_PositifNormal_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_TresGrandNegatif_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_TresGrandNegatif_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_TresGrandNegatif_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_PositifNormal_B_TresProcheDeZeroPositif_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_TresProcheDeZeroPositif_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_TresProcheDeZeroPositif_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_TresProcheDeZeroPositif_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_TresProcheDeZeroPositif_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_TresProcheDeZeroPositif_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_Zero_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_Zero_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_Zero_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroNegatif_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroNegatif_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroNegatif_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_TresProcheDeZeroNegatif_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_TresProcheDeZeroNegatif_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_TresProcheDeZeroNegatif_C_PositifNormal_ -->
+        <test-method signature="testSolveA_PositifNormal_B_ProcheDeZeroNegatif_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_ProcheDeZeroNegatif_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_ProcheDeZeroNegatif_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_TresGrandNegatif_B_TresGrandPositif_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_TresGrandPositif_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_TresGrandPositif_C_Zero_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_TresGrandNegatif_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_TresGrandNegatif_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_TresGrandNegatif_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_ProcheDeZeroPositif_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_ProcheDeZeroPositif_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_ProcheDeZeroPositif_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_ProcheDeZeroNegatif_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_ProcheDeZeroNegatif_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_ProcheDeZeroNegatif_C_PositifNormal_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_NegatifNormal_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_NegatifNormal_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_NegatifNormal_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_Zero_B_TresProcheDeZeroPositif_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_TresProcheDeZeroPositif_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_TresProcheDeZeroPositif_C_PositifNormal_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_TresProcheDeZeroNegatif_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_TresProcheDeZeroNegatif_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_TresProcheDeZeroNegatif_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_ProcheDeZeroNegatif_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_ProcheDeZeroNegatif_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_ProcheDeZeroNegatif_C_Zero_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_TresProcheDeZeroPositif_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_TresProcheDeZeroPositif_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_TresProcheDeZeroPositif_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_NegatifNormal_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_NegatifNormal_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_NegatifNormal_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_ProcheDeZeroNegatif_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_ProcheDeZeroNegatif_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_ProcheDeZeroNegatif_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_TresGrandNegatif_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_TresGrandNegatif_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_TresGrandNegatif_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_Zero_B_TresGrandPositif_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_TresGrandPositif_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_TresGrandPositif_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_Zero_B_NegatifNormal_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_NegatifNormal_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="175" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_NegatifNormal_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_PositifNormal_B_TresGrandNegatif_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_TresGrandNegatif_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_TresGrandNegatif_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresGrandNegatif_B_TresGrandNegatif_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_TresGrandNegatif_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_TresGrandNegatif_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_TresProcheDeZeroNegatif_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_TresProcheDeZeroNegatif_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_TresProcheDeZeroNegatif_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_PositifNormal_ -->
+        <test-method signature="testSolveA_Zero_B_TresGrandNegatif_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_TresGrandNegatif_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_TresGrandNegatif_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_NegatifNormal_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_NegatifNormal_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_NegatifNormal_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_Zero_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_ProcheDeZeroPositif_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_ProcheDeZeroPositif_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_ProcheDeZeroPositif_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_PositifNormal_B_TresProcheDeZeroNegatif_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_TresProcheDeZeroNegatif_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_TresProcheDeZeroNegatif_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroPositif_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroPositif_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroPositif_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_TresGrandNegatif_B_PositifNormal_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_PositifNormal_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_PositifNormal_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_TresProcheDeZeroPositif_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_TresProcheDeZeroPositif_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_TresProcheDeZeroPositif_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_Zero_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_Zero_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_Zero_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_NegatifNormal_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_NegatifNormal_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_NegatifNormal_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_TresProcheDeZeroNegatif_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_TresProcheDeZeroNegatif_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_TresProcheDeZeroNegatif_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_TresGrandPositif_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_TresGrandPositif_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_TresGrandPositif_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_TresGrandNegatif_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_TresGrandNegatif_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_TresGrandNegatif_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_PositifNormal_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_PositifNormal_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_PositifNormal_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_Zero_B_PositifNormal_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_PositifNormal_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_PositifNormal_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_PositifNormal_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_PositifNormal_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_PositifNormal_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_PositifNormal_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_PositifNormal_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_PositifNormal_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_PositifNormal_B_NegatifNormal_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_NegatifNormal_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_NegatifNormal_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_TresGrandPositif_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_TresGrandPositif_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_TresGrandPositif_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_PositifNormal_B_Zero_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_Zero_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_Zero_C_PositifNormal_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_Zero_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_Zero_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_Zero_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_TresProcheDeZeroPositif_C_NegatifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_TresProcheDeZeroPositif_C_NegatifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_TresProcheDeZeroPositif_C_NegatifNormal_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_PositifNormal_B_NegatifNormal_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_NegatifNormal_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_NegatifNormal_C_PositifNormal_ -->
+        <test-method signature="testSolveA_TresGrandNegatif_B_ProcheDeZeroPositif_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_ProcheDeZeroPositif_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_ProcheDeZeroPositif_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_TresProcheDeZeroNegatif_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_TresProcheDeZeroNegatif_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_TresProcheDeZeroNegatif_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_Zero_B_ProcheDeZeroPositif_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_ProcheDeZeroPositif_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_ProcheDeZeroPositif_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_Zero_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_Zero_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_Zero_C_Zero_ -->
+        <test-method signature="testSolveA_Zero_B_TresProcheDeZeroNegatif_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_TresProcheDeZeroNegatif_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_TresProcheDeZeroNegatif_C_Zero_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_ProcheDeZeroPositif_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_ProcheDeZeroPositif_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_ProcheDeZeroPositif_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_Zero_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_Zero_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_Zero_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_NegatifNormal_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_NegatifNormal_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_NegatifNormal_C_Zero_ -->
+        <test-method signature="testSolveA_PositifNormal_B_Zero_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_Zero_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_Zero_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_PositifNormal_B_PositifNormal_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_PositifNormal_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_PositifNormal_C_Zero_ -->
+        <test-method signature="testSolveA_Zero_B_Zero_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_Zero_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_Zero_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_TresGrandNegatif_B_NegatifNormal_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_NegatifNormal_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_NegatifNormal_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_PositifNormal_C_TresProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_PositifNormal_C_TresProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_PositifNormal_C_TresProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_TresProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_TresProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_TresProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresGrandPositif_B_TresGrandNegatif_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandPositif_B_TresGrandNegatif_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandPositif_B_TresGrandNegatif_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_Zero_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_Zero_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_Zero_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroPositif_B_PositifNormal_C_TresGrandPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroPositif_B_PositifNormal_C_TresGrandPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroPositif_B_PositifNormal_C_TresGrandPositif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_TresGrandPositif_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_TresGrandPositif_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_TresGrandPositif_C_Zero_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroPositif_B_PositifNormal_C_PositifNormal_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroPositif_B_PositifNormal_C_PositifNormal_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroPositif_B_PositifNormal_C_PositifNormal_ -->
+        <test-method signature="testSolveA_Zero_B_ProcheDeZeroNegatif_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_Zero_B_ProcheDeZeroNegatif_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_Zero_B_ProcheDeZeroNegatif_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_PositifNormal_B_ProcheDeZeroPositif_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_ProcheDeZeroPositif_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_ProcheDeZeroPositif_C_Zero_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_TresGrandNegatif_C_Zero_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_TresGrandNegatif_C_Zero_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_TresGrandNegatif_C_Zero_ -->
+        <test-method signature="testSolveA_PositifNormal_B_TresGrandPositif_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_PositifNormal_B_TresGrandPositif_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_PositifNormal_B_TresGrandPositif_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_NegatifNormal_B_PositifNormal_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_NegatifNormal_B_PositifNormal_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_NegatifNormal_B_PositifNormal_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroNegatif_C_TresGrandNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroNegatif_C_TresGrandNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroNegatif_C_TresGrandNegatif_ -->
+        <test-method signature="testSolveA_ProcheDeZeroNegatif_B_TresGrandPositif_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_ProcheDeZeroNegatif_B_TresGrandPositif_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_ProcheDeZeroNegatif_B_TresGrandPositif_C_ProcheDeZeroPositif_ -->
+        <test-method signature="testSolveA_TresGrandNegatif_B_TresProcheDeZeroNegatif_C_ProcheDeZeroNegatif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresGrandNegatif_B_TresProcheDeZeroNegatif_C_ProcheDeZeroNegatif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresGrandNegatif_B_TresProcheDeZeroNegatif_C_ProcheDeZeroNegatif_ -->
+        <test-method signature="testSolveA_TresProcheDeZeroNegatif_B_NegatifNormal_C_ProcheDeZeroPositif_() throws java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.lang.InstantiationException,java.lang.ClassNotFoundException" started-at="2024-01-25T19:21:13 WAT" name="testSolveA_TresProcheDeZeroNegatif_B_NegatifNormal_C_ProcheDeZeroPositif_" finished-at="2024-01-25T19:21:13 WAT" duration-ms="311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSolveA_TresProcheDeZeroNegatif_B_NegatifNormal_C_ProcheDeZeroPositif_ -->
+      </class> <!-- dev.djob.id.QuadraticEquationSolverTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

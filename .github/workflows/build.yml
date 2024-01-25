@@ -47,9 +47,5 @@ jobs:
         script: |
           curl -X POST \
             -H "Content-Type: application/json" \
-            -d '{
-              "project": "http://localhost:8008/job/deploy",
-              "pipeline": "deploy",
-              "branch" : "dev"
-            }' \
+            -d '{"project": "http://localhost:8008/job/deploy", "pipeline": "deploy", "branch": "dev"}' \
             http://localhost:8008/job/deploy/buildWithParameters

@@ -41,3 +41,15 @@ jobs:
     - name: Run unit tests 
       run: mvn -e test
 
+    - name: Trigger Jenkins Deployment
+      uses: actions/github-script@v3
+      with:
+        script: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d '{
+              "project": "http://localhost:8080/job/deploy",
+              "pipeline": "deploy",
+              "branch" : "dev"
+            }' \
+            http://localhost:8080/job/deploy/buildWithParameters

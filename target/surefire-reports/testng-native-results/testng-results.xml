@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-22T16:26:22 WAT" name="Surefire suite" finished-at="2024-01-22T16:26:28 WAT" duration-ms="6362">
+  <suite started-at="2024-01-25T03:46:08 WAT" name="Surefire suite" finished-at="2024-01-25T03:46:10 WAT" duration-ms="2552">
     <groups>
     </groups>
-    <test started-at="2024-01-22T16:26:22 WAT" name="Surefire test" finished-at="2024-01-22T16:26:28 WAT" duration-ms="6362">
+    <test started-at="2024-01-25T03:46:08 WAT" name="Surefire test" finished-at="2024-01-25T03:46:10 WAT" duration-ms="2552">
       <class name="dev.djob.id.TestSolver">
-        <test-method signature="buildTestSolver()[pri:0, instance:dev.djob.id.TestSolver@7fc229ab]" started-at="2024-01-22T16:26:22 WAT" name="buildTestSolver" finished-at="2024-01-22T16:26:28 WAT" duration-ms="6315" status="PASS">
+        <test-method signature="buildTestSolver()[pri:0, instance:dev.djob.id.TestSolver@2ddc8ecb]" started-at="2024-01-25T03:46:08 WAT" name="buildTestSolver" finished-at="2024-01-25T03:46:10 WAT" duration-ms="2497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buildTestSolver -->

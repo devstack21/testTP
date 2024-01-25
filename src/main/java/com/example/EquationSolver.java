@@ -1,4 +1,4 @@
-package dev.djob.id;
+package com.example;
 
 import lombok.NoArgsConstructor;
 

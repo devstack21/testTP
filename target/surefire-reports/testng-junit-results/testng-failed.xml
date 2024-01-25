@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" junit="true" name="Failed suite [Surefire suite]" verbose="0">
+  <test junit="true" thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="org.junit.runner.Description">
+        <methods>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_TresGrandPositif_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_ProcheDeZeroPositif_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_Zero_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_TresGrandNegatif_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_Zero_B_Zero_C_TresGrandNegatif_"/>
+          <include name="testSolveA_Zero_B_TresGrandNegatif_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_TresGrandPositif_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_PositifNormal_B_NegatifNormal_C_PositifNormal_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_PositifNormal_B_TresGrandPositif_C_TresGrandNegatif_"/>
+          <include name="testSolveA_NegatifNormal_B_Zero_C_TresGrandPositif_"/>
+          <include name="testSolveA_Zero_B_NegatifNormal_C_NegatifNormal_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_PositifNormal_C_TresGrandPositif_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_PositifNormal_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresGrandNegatif_B_TresGrandNegatif_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_NegatifNormal_B_Zero_C_NegatifNormal_"/>
+          <include name="testSolveA_TresGrandPositif_B_TresGrandNegatif_C_PositifNormal_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_TresGrandPositif_C_Zero_"/>
+          <include name="testSolveA_NegatifNormal_B_NegatifNormal_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_PositifNormal_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_TresProcheDeZeroNegatif_C_TresGrandPositif_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_Zero_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_Zero_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_NegatifNormal_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_Zero_B_PositifNormal_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_ProcheDeZeroNegatif_C_TresGrandNegatif_"/>
+          <include name="testSolveA_TresGrandPositif_B_ProcheDeZeroNegatif_C_Zero_"/>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_Zero_C_Zero_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroNegatif_C_NegatifNormal_"/>
+          <include name="testSolveA_Zero_B_TresGrandPositif_C_TresGrandPositif_"/>
+          <include name="testSolveA_NegatifNormal_B_ProcheDeZeroNegatif_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_ProcheDeZeroPositif_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_TresGrandNegatif_C_TresGrandNegatif_"/>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_PositifNormal_C_NegatifNormal_"/>
+          <include name="testSolveA_Zero_B_TresProcheDeZeroNegatif_C_Zero_"/>
+          <include name="testSolveA_Zero_B_ProcheDeZeroPositif_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresGrandNegatif_B_ProcheDeZeroNegatif_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_ProcheDeZeroNegatif_C_PositifNormal_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_NegatifNormal_B_PositifNormal_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresGrandPositif_B_TresGrandPositif_C_NegatifNormal_"/>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_NegatifNormal_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresGrandPositif_B_TresProcheDeZeroPositif_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_PositifNormal_B_TresProcheDeZeroNegatif_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_ProcheDeZeroNegatif_C_TresGrandPositif_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_TresGrandNegatif_C_NegatifNormal_"/>
+          <include name="testSolveA_PositifNormal_B_PositifNormal_C_Zero_"/>
+          <include name="testSolveA_TresGrandNegatif_B_NegatifNormal_C_TresGrandNegatif_"/>
+          <include name="testSolveA_NegatifNormal_B_TresProcheDeZeroNegatif_C_PositifNormal_"/>
+          <include name="testSolveA_PositifNormal_B_TresProcheDeZeroPositif_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_PositifNormal_B_ProcheDeZeroPositif_C_Zero_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_TresGrandNegatif_"/>
+          <include name="testSolveA_PositifNormal_B_Zero_C_PositifNormal_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_TresProcheDeZeroPositif_C_TresGrandPositif_"/>
+          <include name="testSolveA_NegatifNormal_B_TresGrandPositif_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresGrandPositif_B_TresGrandNegatif_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresGrandNegatif_B_TresGrandPositif_C_Zero_"/>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_TresProcheDeZeroNegatif_C_TresGrandNegatif_"/>
+          <include name="testSolveA_Zero_B_ProcheDeZeroNegatif_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_NegatifNormal_C_Zero_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_PositifNormal_"/>
+          <include name="testSolveA_TresGrandPositif_B_NegatifNormal_C_TresGrandPositif_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_TresProcheDeZeroNegatif_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_TresProcheDeZeroPositif_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_TresGrandPositif_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresGrandPositif_B_Zero_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_NegatifNormal_B_ProcheDeZeroPositif_C_TresGrandNegatif_"/>
+          <include name="testSolveA_TresGrandNegatif_B_TresProcheDeZeroNegatif_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_TresProcheDeZeroNegatif_B_NegatifNormal_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_PositifNormal_B_TresGrandNegatif_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_TresProcheDeZeroPositif_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_PositifNormal_B_Zero_C_TresGrandPositif_"/>
+          <include name="testSolveA_TresGrandNegatif_B_TresProcheDeZeroPositif_C_TresProcheDeZeroNegatif_"/>
+          <include name="testSolveA_ProcheDeZeroNegatif_B_TresGrandNegatif_C_TresGrandPositif_"/>
+          <include name="testSolveA_Zero_B_TresProcheDeZeroPositif_C_PositifNormal_"/>
+          <include name="testSolveA_NegatifNormal_B_TresGrandNegatif_C_Zero_"/>
+          <include name="testSolveA_TresGrandPositif_B_ProcheDeZeroPositif_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_PositifNormal_B_NegatifNormal_C_ProcheDeZeroNegatif_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_Zero_C_TresProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresGrandNegatif_B_ProcheDeZeroPositif_C_TresGrandPositif_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_PositifNormal_C_ProcheDeZeroPositif_"/>
+          <include name="testSolveA_TresGrandPositif_B_PositifNormal_C_TresGrandNegatif_"/>
+          <include name="testSolveA_TresGrandNegatif_B_Zero_C_PositifNormal_"/>
+          <include name="testSolveA_NegatifNormal_B_TresProcheDeZeroPositif_C_NegatifNormal_"/>
+          <include name="testSolveA_PositifNormal_B_ProcheDeZeroNegatif_C_NegatifNormal_"/>
+          <include name="testSolveA_TresGrandNegatif_B_PositifNormal_C_NegatifNormal_"/>
+          <include name="testSolveA_ProcheDeZeroPositif_B_ProcheDeZeroPositif_C_NegatifNormal_"/>
+          <include name="testSolveA_TresProcheDeZeroPositif_B_PositifNormal_C_PositifNormal_"/>
+          <include name="testSolveA_TresGrandPositif_B_TresProcheDeZeroNegatif_C_ProcheDeZeroPositif_"/>
+        </methods>
+      </class> <!-- org.junit.runner.Description -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

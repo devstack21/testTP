@@ -1,699 +1,699 @@
-// package dev.djob.id;
+package dev.djob.id;
 
-// import org.apache.commons.csv.*;
-// import org.junit.Test;
+import org.apache.commons.csv.*;
+import org.junit.Test;
 
-// import java.io.FileWriter;
-// import java.io.IOException;
-// import java.lang.reflect.InvocationTargetException;
-// import java.nio.file.Files;
-// import java.nio.file.Paths;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-// import static org.junit.Assert.assertEquals;
-// public class EquationTest {
-//     public boolean monAssertion(double expected, double actual, double epsilon) {
-//         boolean reussi = Math.abs(expected - actual) <= epsilon;
-//         return reussi;
-//     }  
+import static org.junit.Assert.assertEquals;
+public class EquationTest {
+    public boolean monAssertion(double expected, double actual, double epsilon) {
+        boolean reussi = Math.abs(expected - actual) <= epsilon;
+        return reussi;
+    }  
       
-//     @Test
-//     public void testSolve_a_null_b_proche_de_0_positif__c_null() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
-//         double a = 0.0;
-//         double b = 4.764142553129117;
-//         double c = 0.0;
-//         boolean result1 ;
-//         String testName=" testSolve_a_null_b_proche_de_0_positif__c_null";
-//         String testValue = " dans la fonction "+testName+"  ";
-//         double expectedValue = 0.0;
-//         double epsilon = 1e-10;
-//         String expectedResult;
-//         String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
+    @Test
+    public void testSolve_a_null_b_proche_de_0_positif__c_null() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
+        double a = 0.0;
+        double b = 4.764142553129117;
+        double c = 0.0;
+        boolean result1 ;
+        String testName=" testSolve_a_null_b_proche_de_0_positif__c_null";
+        String testValue = " dans la fonction "+testName+"  ";
+        double expectedValue = 0.0;
+        double epsilon = 1e-10;
+        String expectedResult;
+        String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
 
-//         Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
-//         Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
-//         double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
-//         // V�rifiez combien de racines l'�quation a
-//         int numberOfRoots = result.length;
-//         if (numberOfRoots == 2) {
-//             expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
-//             // L'�quation a deux racines
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-20);
-//             assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
-//             boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
-//             if (assertionResult1) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult && assertionResult1;
-//         } else if (numberOfRoots == 1) {
-//             // L'�quation a une racine
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             expectedResult = " x?="+result[0] ;
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult;
-//         } else {
-//             // Aucune racine r�elle
-//             assertEquals(0, result.length, 0);
-//             expectedResult =" ensemble vide dans R ";
-//             boolean assertionResult = monAssertion(expectedValue, result.length, 0);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
-//                 System.out.println("L'assertion de l ensemble vide a �chou�");
-//             }
-//             result1 = assertionResult;
-//         }CSVPrinter csvPrinter = null;
-//         try {
-//             // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
-//             if (!Files.exists(Paths.get("test_results.csv"))) {
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             else{
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT;
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         } finally {
-//             try {
-//                 if (csvPrinter != null) {
-//                     csvPrinter.close();
-//                 }
-//             } catch (IOException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
+        Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
+        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
+        double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
+        // V�rifiez combien de racines l'�quation a
+        int numberOfRoots = result.length;
+        if (numberOfRoots == 2) {
+            expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
+            // L'�quation a deux racines
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-20);
+            assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
+            boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
+            if (assertionResult1) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult && assertionResult1;
+        } else if (numberOfRoots == 1) {
+            // L'�quation a une racine
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            expectedResult = " x?="+result[0] ;
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult;
+        } else {
+            // Aucune racine r�elle
+            assertEquals(0, result.length, 0);
+            expectedResult =" ensemble vide dans R ";
+            boolean assertionResult = monAssertion(expectedValue, result.length, 0);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
+                System.out.println("L'assertion de l ensemble vide a �chou�");
+            }
+            result1 = assertionResult;
+        }CSVPrinter csvPrinter = null;
+        try {
+            // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
+            if (!Files.exists(Paths.get("test_results.csv"))) {
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            else{
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT;
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (csvPrinter != null) {
+                    csvPrinter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
-//     @Test
-//     public void testSolve_a_tres_proche_de_zero__b_normal_negatif__c_tres_proche_de_zero_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
-//         double a = 5.484229000191632E-7;
-//         double b = -42.259239334589836;
-//         double c = 6.281228668844043E-7;
-//         boolean result1 ;
-//         String testName=" testSolve_a_tres_proche_de_zero__b_normal_negatif__c_tres_proche_de_zero_";
-//         String testValue = " dans la fonction "+testName+"  ";
-//         double expectedValue = 0.0;
-//         double epsilon = 1e-10;
-//         String expectedResult;
-//         String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
+    @Test
+    public void testSolve_a_tres_proche_de_zero__b_normal_negatif__c_tres_proche_de_zero_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
+        double a = 5.484229000191632E-7;
+        double b = -42.259239334589836;
+        double c = 6.281228668844043E-7;
+        boolean result1 ;
+        String testName=" testSolve_a_tres_proche_de_zero__b_normal_negatif__c_tres_proche_de_zero_";
+        String testValue = " dans la fonction "+testName+"  ";
+        double expectedValue = 0.0;
+        double epsilon = 1e-10;
+        String expectedResult;
+        String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
 
-//         Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
-//         Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
-//         double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
+        Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
+        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
+        double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
         
-//         // V�rifiez combien de racines l'�quation a
-//         int numberOfRoots = result.length;
-//         if (numberOfRoots == 2) {
-//             expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
-//             // L'�quation a deux racines
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
-//             boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
-//             if (assertionResult1) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult && assertionResult1;
-//         } else if (numberOfRoots == 1) {
-//             // L'�quation a une racine
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             expectedResult = " x?="+result[0] ;
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult;
-//         } else {
-//             // Aucune racine r�elle
-//             assertEquals(0, result.length, 0);
-//             expectedResult =" ensemble vide dans R ";
-//             boolean assertionResult = monAssertion(expectedValue, result.length, 0);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
-//                 System.out.println("L'assertion de l ensemble vide a �chou�");
-//             }
-//             result1 = assertionResult;
-//         }CSVPrinter csvPrinter = null;
-//         try {
-//             // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
-//             if (!Files.exists(Paths.get("test_results.csv"))) {
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             else{
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT;
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         } finally {
-//             try {
-//                 if (csvPrinter != null) {
-//                     csvPrinter.close();
-//                 }
-//             } catch (IOException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
+        // V�rifiez combien de racines l'�quation a
+        int numberOfRoots = result.length;
+        if (numberOfRoots == 2) {
+            expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
+            // L'�quation a deux racines
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
+            boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
+            if (assertionResult1) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult && assertionResult1;
+        } else if (numberOfRoots == 1) {
+            // L'�quation a une racine
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            expectedResult = " x?="+result[0] ;
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult;
+        } else {
+            // Aucune racine r�elle
+            assertEquals(0, result.length, 0);
+            expectedResult =" ensemble vide dans R ";
+            boolean assertionResult = monAssertion(expectedValue, result.length, 0);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
+                System.out.println("L'assertion de l ensemble vide a �chou�");
+            }
+            result1 = assertionResult;
+        }CSVPrinter csvPrinter = null;
+        try {
+            // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
+            if (!Files.exists(Paths.get("test_results.csv"))) {
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            else{
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT;
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (csvPrinter != null) {
+                    csvPrinter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     
 
-//     @Test
-//     public void testSolve_a_tres_proche_de_0_negatif__b_proche_de_0_negatif__c_proche_de_0_positif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
-//         double a = -4.2738240509575013E-7;
-//         double b = -4.405388784343381;
-//         double c = 4.921108515481011;
-//         boolean result1 ;
-//         String testName=" testSolve_a_tres_proche_de_0_negatif__b_proche_de_0_negatif__c_proche_de_0_positif_";
-//         String testValue = " dans la fonction "+testName+"  ";
-//         double expectedValue = 0.0;
-//         double epsilon = 1e-10;
-//         String expectedResult;
-//         String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
+    @Test
+    public void testSolve_a_tres_proche_de_0_negatif__b_proche_de_0_negatif__c_proche_de_0_positif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
+        double a = -4.2738240509575013E-7;
+        double b = -4.405388784343381;
+        double c = 4.921108515481011;
+        boolean result1 ;
+        String testName=" testSolve_a_tres_proche_de_0_negatif__b_proche_de_0_negatif__c_proche_de_0_positif_";
+        String testValue = " dans la fonction "+testName+"  ";
+        double expectedValue = 0.0;
+        double epsilon = 1e-10;
+        String expectedResult;
+        String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
 
-//         Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
-//         Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
-//         double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
-//         // V�rifiez combien de racines l'�quation a
-//         int numberOfRoots = result.length;
-//         if (numberOfRoots == 2) {
-//             expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
-//             // L'�quation a deux racines
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
-//             boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
-//             if (assertionResult1) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult && assertionResult1;
-//         } else if (numberOfRoots == 1) {
-//             // L'�quation a une racine
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             expectedResult = " x?="+result[0] ;
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult;
-//         } else {
-//             // Aucune racine r�elle
-//             assertEquals(0, result.length, 0);
-//             expectedResult =" ensemble vide dans R ";
-//             boolean assertionResult = monAssertion(expectedValue, result.length, 0);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
-//                 System.out.println("L'assertion de l ensemble vide a �chou�");
-//             }
-//             result1 = assertionResult;
-//         }CSVPrinter csvPrinter = null;
-//         try {
-//             // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
-//             if (!Files.exists(Paths.get("test_results.csv"))) {
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             else{
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT;
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         } finally {
-//             try {
-//                 if (csvPrinter != null) {
-//                     csvPrinter.close();
-//                 }
-//             } catch (IOException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
-
-
-//     @Test
-//     public void testSolve_a_proche_de_0_positif__b_tres_proche_de_zero__c_tres_proche_de_0_negatif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
-//         double a = 3.8652880790685518;
-//         double b = 7.080289005940507E-7;
-//         double c = -9.931643652073008E-7;
-//         boolean result1 ;
-//         String testName=" testSolve_a_proche_de_0_positif__b_tres_proche_de_zero__c_tres_proche_de_0_negatif_";
-//         String testValue = " dans la fonction "+testName+"  ";
-//         double expectedValue = 0.0;
-//         double epsilon = 1e-10;
-//         String expectedResult;
-//         String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
-
-//         Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
-//         Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
-//         double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
-//         // V�rifiez combien de racines l'�quation a
-//         int numberOfRoots = result.length;
-//         if (numberOfRoots == 2) {
-//             expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
-//             // L'�quation a deux racines
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
-//             boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
-//             if (assertionResult1) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult && assertionResult1;
-//         } else if (numberOfRoots == 1) {
-//             // L'�quation a une racine
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             expectedResult = " x?="+result[0] ;
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult;
-//         } else {
-//             // Aucune racine r�elle
-//             assertEquals(0, result.length, 0);
-//             expectedResult =" ensemble vide dans R ";
-//             boolean assertionResult = monAssertion(expectedValue, result.length, 0);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
-//                 System.out.println("L'assertion de l ensemble vide a �chou�");
-//             }
-//             result1 = assertionResult;
-//         }CSVPrinter csvPrinter = null;
-//         try {
-//             // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
-//             if (!Files.exists(Paths.get("test_results.csv"))) {
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             else{
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT;
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         } finally {
-//             try {
-//                 if (csvPrinter != null) {
-//                     csvPrinter.close();
-//                 }
-//             } catch (IOException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
+        Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
+        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
+        double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
+        // V�rifiez combien de racines l'�quation a
+        int numberOfRoots = result.length;
+        if (numberOfRoots == 2) {
+            expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
+            // L'�quation a deux racines
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
+            boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
+            if (assertionResult1) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult && assertionResult1;
+        } else if (numberOfRoots == 1) {
+            // L'�quation a une racine
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            expectedResult = " x?="+result[0] ;
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult;
+        } else {
+            // Aucune racine r�elle
+            assertEquals(0, result.length, 0);
+            expectedResult =" ensemble vide dans R ";
+            boolean assertionResult = monAssertion(expectedValue, result.length, 0);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
+                System.out.println("L'assertion de l ensemble vide a �chou�");
+            }
+            result1 = assertionResult;
+        }CSVPrinter csvPrinter = null;
+        try {
+            // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
+            if (!Files.exists(Paths.get("test_results.csv"))) {
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            else{
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT;
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (csvPrinter != null) {
+                    csvPrinter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
-//     @Test
-//     public void testSolve_a_proche_de_0_negatif__b_normal_positif__c_normal_positif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
-//         double a = -2.6749076125113707;
-//         double b = 84.44004208840676;
-//         double c = 415.1693513298763;
-//         boolean result1 ;
-//         String testName=" testSolve_a_proche_de_0_negatif__b_normal_positif__c_normal_positif_";
-//         String testValue = " dans la fonction "+testName+"  ";
-//         double expectedValue = 0.0;
-//         double epsilon = 1e-10;
-//         String expectedResult;
-//         String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
+    @Test
+    public void testSolve_a_proche_de_0_positif__b_tres_proche_de_zero__c_tres_proche_de_0_negatif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
+        double a = 3.8652880790685518;
+        double b = 7.080289005940507E-7;
+        double c = -9.931643652073008E-7;
+        boolean result1 ;
+        String testName=" testSolve_a_proche_de_0_positif__b_tres_proche_de_zero__c_tres_proche_de_0_negatif_";
+        String testValue = " dans la fonction "+testName+"  ";
+        double expectedValue = 0.0;
+        double epsilon = 1e-10;
+        String expectedResult;
+        String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
 
-//         Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
-//         Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
-//         double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
-//         // V�rifiez combien de racines l'�quation a
-//         int numberOfRoots = result.length;
-//         if (numberOfRoots == 2) {
-//             expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
-//             // L'�quation a deux racines
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
-//             boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
-//             if (assertionResult1) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult && assertionResult1;
-//         } else if (numberOfRoots == 1) {
-//             // L'�quation a une racine
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             expectedResult = " x?="+result[0] ;
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult;
-//         } else {
-//             // Aucune racine r�elle
-//             assertEquals(0, result.length, 0);
-//             expectedResult =" ensemble vide dans R ";
-//             boolean assertionResult = monAssertion(expectedValue, result.length, 0);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
-//                 System.out.println("L'assertion de l ensemble vide a �chou�");
-//             }
-//             result1 = assertionResult;
-//         }CSVPrinter csvPrinter = null;
-//         try {
-//             // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
-//             if (!Files.exists(Paths.get("test_results.csv"))) {
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             else{
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT;
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         } finally {
-//             try {
-//                 if (csvPrinter != null) {
-//                     csvPrinter.close();
-//                 }
-//             } catch (IOException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
-
-
-//     @Test
-//     public void testSolve_a_normal_positif__b_negatif_grand__c_grand_positif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
-//         double a = 80.22464053834942;
-//         double b = -4.66588078693741E8;
-//         double c = 5.956108837126232E8;
-//         boolean result1 ;
-//         String testName=" testSolve_a_normal_positif__b_negatif_grand__c_grand_positif_";
-//         String testValue = " dans la fonction "+testName+"  ";
-//         double expectedValue = 0.0;
-//         double epsilon = 1e-10;
-//         String expectedResult;
-//         String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
-
-//         Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
-//         Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
-//         double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
-//         // V�rifiez combien de racines l'�quation a
-//         int numberOfRoots = result.length;
-//         if (numberOfRoots == 2) {
-//             expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
-//             // L'�quation a deux racines
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
-//             boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
-//             if (assertionResult1) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult && assertionResult1;
-//         } else if (numberOfRoots == 1) {
-//             // L'�quation a une racine
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             expectedResult = " x?="+result[0] ;
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult;
-//         } else {
-//             // Aucune racine r�elle
-//             assertEquals(0, result.length, 0);
-//             expectedResult =" ensemble vide dans R ";
-//             boolean assertionResult = monAssertion(expectedValue, result.length, 0);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
-//                 System.out.println("L'assertion de l ensemble vide a �chou�");
-//             }
-//             result1 = assertionResult;
-//         }CSVPrinter csvPrinter = null;
-//         try {
-//             // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
-//             if (!Files.exists(Paths.get("test_results.csv"))) {
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             else{
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT;
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         } finally {
-//             try {
-//                 if (csvPrinter != null) {
-//                     csvPrinter.close();
-//                 }
-//             } catch (IOException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
+        Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
+        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
+        double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
+        // V�rifiez combien de racines l'�quation a
+        int numberOfRoots = result.length;
+        if (numberOfRoots == 2) {
+            expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
+            // L'�quation a deux racines
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
+            boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
+            if (assertionResult1) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult && assertionResult1;
+        } else if (numberOfRoots == 1) {
+            // L'�quation a une racine
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            expectedResult = " x?="+result[0] ;
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult;
+        } else {
+            // Aucune racine r�elle
+            assertEquals(0, result.length, 0);
+            expectedResult =" ensemble vide dans R ";
+            boolean assertionResult = monAssertion(expectedValue, result.length, 0);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
+                System.out.println("L'assertion de l ensemble vide a �chou�");
+            }
+            result1 = assertionResult;
+        }CSVPrinter csvPrinter = null;
+        try {
+            // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
+            if (!Files.exists(Paths.get("test_results.csv"))) {
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            else{
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT;
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (csvPrinter != null) {
+                    csvPrinter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
-//     @Test
-//     public void testSolve_a_normal_negatif__b_null_c_normal_negatif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
-//         double a = -347.9066848220078;
-//         double b = 0.0;
-//         double c = -426.85135017989126;
-//         boolean result1 ;
-//         String testName=" testSolve_a_normal_negatif__b_null_c_normal_negatif_";
-//         String testValue = " dans la fonction "+testName+"  ";
-//         double expectedValue = 0.0;
-//         double epsilon = 1e-10;
-//         String expectedResult;
-//         String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
+    @Test
+    public void testSolve_a_proche_de_0_negatif__b_normal_positif__c_normal_positif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
+        double a = -2.6749076125113707;
+        double b = 84.44004208840676;
+        double c = 415.1693513298763;
+        boolean result1 ;
+        String testName=" testSolve_a_proche_de_0_negatif__b_normal_positif__c_normal_positif_";
+        String testValue = " dans la fonction "+testName+"  ";
+        double expectedValue = 0.0;
+        double epsilon = 1e-10;
+        String expectedResult;
+        String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
 
-//         Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
-//         Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
-//         double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
-//         // V�rifiez combien de racines l'�quation a
-//         int numberOfRoots = result.length;
-//         if (numberOfRoots == 2) {
-//             expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
-//             // L'�quation a deux racines
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
-//             boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
-//             if (assertionResult1) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult && assertionResult1;
-//         } else if (numberOfRoots == 1) {
-//             // L'�quation a une racine
-//             assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
-//             expectedResult = " x?="+result[0] ;
-//             double actualValue = a * result[0] * result[0] + b * result[0] + c;
-//             boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de x?  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de x?  a �chou�";
-//                 System.out.println("L'assertion a �chou�");
-//             }
-//             result1 = assertionResult;
-//         } else {
-//             // Aucune racine r�elle
-//             assertEquals(0, result.length, 0);
-//             expectedResult =" ensemble vide dans R ";
-//             boolean assertionResult = monAssertion(expectedValue, result.length, 0);
-//             if (assertionResult) {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
-//                 System.out.println("L'assertion a r�ussi");
-//             } else {
-//                 testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
-//                 System.out.println("L'assertion de l ensemble vide a �chou�");
-//             }
-//             result1 = assertionResult;
-//         }CSVPrinter csvPrinter = null;
-//         try {
-//             // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
-//             if (!Files.exists(Paths.get("test_results.csv"))) {
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             else{
-//                 FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
-//                 CSVFormat csvFormat = CSVFormat.DEFAULT;
-//                 csvPrinter = new CSVPrinter(fileWriter, csvFormat);
-//             }
-//             csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         } finally {
-//             try {
-//                 if (csvPrinter != null) {
-//                     csvPrinter.close();
-//                 }
-//             } catch (IOException e) {
-//                 e.printStackTrace();
-//             }
-//         }
-//     }
+        Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
+        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
+        double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
+        // V�rifiez combien de racines l'�quation a
+        int numberOfRoots = result.length;
+        if (numberOfRoots == 2) {
+            expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
+            // L'�quation a deux racines
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
+            boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
+            if (assertionResult1) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult && assertionResult1;
+        } else if (numberOfRoots == 1) {
+            // L'�quation a une racine
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            expectedResult = " x?="+result[0] ;
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult;
+        } else {
+            // Aucune racine r�elle
+            assertEquals(0, result.length, 0);
+            expectedResult =" ensemble vide dans R ";
+            boolean assertionResult = monAssertion(expectedValue, result.length, 0);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
+                System.out.println("L'assertion de l ensemble vide a �chou�");
+            }
+            result1 = assertionResult;
+        }CSVPrinter csvPrinter = null;
+        try {
+            // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
+            if (!Files.exists(Paths.get("test_results.csv"))) {
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            else{
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT;
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (csvPrinter != null) {
+                    csvPrinter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    @Test
+    public void testSolve_a_normal_positif__b_negatif_grand__c_grand_positif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
+        double a = 80.22464053834942;
+        double b = -4.66588078693741E8;
+        double c = 5.956108837126232E8;
+        boolean result1 ;
+        String testName=" testSolve_a_normal_positif__b_negatif_grand__c_grand_positif_";
+        String testValue = " dans la fonction "+testName+"  ";
+        double expectedValue = 0.0;
+        double epsilon = 1e-10;
+        String expectedResult;
+        String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
+
+        Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
+        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
+        double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
+        // V�rifiez combien de racines l'�quation a
+        int numberOfRoots = result.length;
+        if (numberOfRoots == 2) {
+            expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
+            // L'�quation a deux racines
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
+            boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
+            if (assertionResult1) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult && assertionResult1;
+        } else if (numberOfRoots == 1) {
+            // L'�quation a une racine
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            expectedResult = " x?="+result[0] ;
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult;
+        } else {
+            // Aucune racine r�elle
+            assertEquals(0, result.length, 0);
+            expectedResult =" ensemble vide dans R ";
+            boolean assertionResult = monAssertion(expectedValue, result.length, 0);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
+                System.out.println("L'assertion de l ensemble vide a �chou�");
+            }
+            result1 = assertionResult;
+        }CSVPrinter csvPrinter = null;
+        try {
+            // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
+            if (!Files.exists(Paths.get("test_results.csv"))) {
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            else{
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT;
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (csvPrinter != null) {
+                    csvPrinter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    @Test
+    public void testSolve_a_normal_negatif__b_null_c_normal_negatif_() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, InstantiationException, ClassNotFoundException {
+        double a = -347.9066848220078;
+        double b = 0.0;
+        double c = -426.85135017989126;
+        boolean result1 ;
+        String testName=" testSolve_a_normal_negatif__b_null_c_normal_negatif_";
+        String testValue = " dans la fonction "+testName+"  ";
+        double expectedValue = 0.0;
+        double epsilon = 1e-10;
+        String expectedResult;
+        String equation = " "+a+"x� + "+ b + "x + "+c+ " = 0";
+
+        Class<?> dynamicClass = Class.forName("dev.djob.id.EquationSolver");
+        Object dynamicObject = dynamicClass.getDeclaredConstructor().newInstance();
+        double[] result = (double[]) dynamicClass.getMethod("solve", double.class, double.class, double.class).invoke(dynamicObject, a, b,c);
+        // V�rifiez combien de racines l'�quation a
+        int numberOfRoots = result.length;
+        if (numberOfRoots == 2) {
+            expectedResult = " x?="+result[0]+" et  x? = "+result[1] ;
+            // L'�quation a deux racines
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            assertEquals(0, a * result[1] * result[1] + b * result[1] + c, 1e-10);
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            double actualValue1 = a * result[1] * result[1] + b * result[1] + c;
+            boolean assertionResult1 = monAssertion(expectedValue, actualValue1, epsilon);
+            if (assertionResult1) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult && assertionResult1;
+        } else if (numberOfRoots == 1) {
+            // L'�quation a une racine
+            assertEquals(0, a * result[0] * result[0] + b * result[0] + c, 1e-10);
+            expectedResult = " x?="+result[0] ;
+            double actualValue = a * result[0] * result[0] + b * result[0] + c;
+            boolean assertionResult = monAssertion(expectedValue, actualValue, epsilon);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de x?  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de x?  a �chou�";
+                System.out.println("L'assertion a �chou�");
+            }
+            result1 = assertionResult;
+        } else {
+            // Aucune racine r�elle
+            assertEquals(0, result.length, 0);
+            expectedResult =" ensemble vide dans R ";
+            boolean assertionResult = monAssertion(expectedValue, result.length, 0);
+            if (assertionResult) {
+                testValue=testValue+"L'assertion de l ensemble vide  a r�ussi";
+                System.out.println("L'assertion a r�ussi");
+            } else {
+                testValue=testValue+"L'assertion de l ensemble vide  a �chou�";
+                System.out.println("L'assertion de l ensemble vide a �chou�");
+            }
+            result1 = assertionResult;
+        }CSVPrinter csvPrinter = null;
+        try {
+            // Ajoutez une ligne d'en-t�te avec des descriptions de colonnes
+            if (!Files.exists(Paths.get("test_results.csv"))) {
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader("EQUATION","Test Name", "A Value", "B Value", "C Value", "Expected Result", " RESULTAT DU TEST"," RESULTAT FONCTION");
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            else{
+                FileWriter fileWriter = new FileWriter("test_results.csv", true); // Le "true" indique d'ajouter au fichier existant
+                CSVFormat csvFormat = CSVFormat.DEFAULT;
+                csvPrinter = new CSVPrinter(fileWriter, csvFormat);
+            }
+            csvPrinter.printRecord(equation,testName, a, b, c, expectedResult,testValue,result1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (csvPrinter != null) {
+                    csvPrinter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 
 // //     @Test
